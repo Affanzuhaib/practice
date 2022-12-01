@@ -11,33 +11,33 @@ import { useNavigate } from "react-router-dom";
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
-  const { dates } = useContext(SearchContext);
+  // const { dates } = useContext(SearchContext);
 
-  const getDatesInRange = (startDate, endDate) => {
-    const start = new Date(startDate);
-    const end = new Date(endDate);
+  // const getDatesInRange = (startDate, endDate) => {
+  //   const start = new Date(startDate);
+  //   const end = new Date(endDate);
 
-    const date = new Date(start.getTime());
+  //   const date = new Date(start.getTime());
 
-    const dates = [];
+  //   const dates = [];
 
-    while (date <= end) {
-      dates.push(new Date(date).getTime());
-      date.setDate(date.getDate() + 1);
-    }
+  //   while (date <= end) {
+  //     dates.push(new Date(date).getTime());
+  //     date.setDate(date.getDate() + 1);
+  //   }
 
-    return dates;
-  };
+  //   return dates;
+  // };
 
-  const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate);
+  // const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate);
 
-  const isAvailable = (roomNumber) => {
-    const isFound = roomNumber.unavailableDates.some((date) =>
-      alldates.includes(new Date(date).getTime())
-    );
+  // const isAvailable = (roomNumber) => {
+  //   const isFound = roomNumber.unavailableDates.some((date) =>
+  //     alldates.includes(new Date(date).getTime())
+  //   );
 
-    return !isFound;
-  };
+  //   return !isFound;
+  // };
 
   const handleSelect = (e) => {
     const checked = e.target.checked;
@@ -56,7 +56,7 @@ const Reserve = ({ setOpen, hotelId }) => {
       await Promise.all(
         selectedRooms.map((roomId) => {
           const res = axios.put(`/rooms/availability/${roomId}`, {
-            dates: alldates,
+            // dates: alldates,
           });
           return res.data;
         })
@@ -92,7 +92,7 @@ const Reserve = ({ setOpen, hotelId }) => {
                     type="checkbox"
                     value={roomNumber._id}
                     onChange={handleSelect}
-                    disabled={!isAvailable(roomNumber)}
+                    // disabled={!isAvailable(roomNumber)}
                   />
                 </div>
               ))}

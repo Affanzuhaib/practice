@@ -20,14 +20,14 @@ import { AuthContext } from "../../context/AuthContext";
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
   const [openDate, setOpenDate] = useState(false);
-  const [dates, setDates] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  ]);
-  const [openOptions, setOpenOptions] = useState(false);
+  // const [dates, setDates] = useState([
+  //   {
+  //     startDate: new Date(),
+  //     endDate: new Date(),
+  //     key: "selection",
+  //   },
+  // ]);
+  //const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
     children: 0,
@@ -50,8 +50,8 @@ const Header = ({ type }) => {
   const { dispatch } = useContext(SearchContext);
 
   const handleSearch = () => {
-    dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
-    navigate("/hotels", { state: { destination, dates, options } });
+    dispatch({ type: "NEW_SEARCH", payload: { destination } });
+    navigate("/hotels", { state: { destination} });
   };
 
   return (

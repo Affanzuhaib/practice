@@ -28,16 +28,16 @@ const Hotel = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const { dates, options } = useContext(SearchContext);
+  //const { dates, options } = useContext(SearchContext);
 
-  const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
-  function dayDifference(date1, date2) {
-    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
-    const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
-    return diffDays;
-  }
+  // const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+  // function dayDifference(date1, date2) {
+  //   const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+  //   const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
+  //   return diffDays;
+  // }
 
-  const days = dayDifference(dates[0].endDate, dates[0].startDate);
+  //const days = dayDifference(dates[0].endDate, dates[0].startDate);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -108,7 +108,7 @@ const Hotel = () => {
               Excellent location – {data.distance}m from center
             </span>
             <span className="hotelPriceHighlight">
-              Book a stay over ₹{data.cheapestPrice} at this property and get a
+              Book a stay over ₹{data.cheapestprice} at this property and get a
               free airport taxi
             </span>
             <div className="hotelImages">
@@ -129,14 +129,13 @@ const Hotel = () => {
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">
-                <h1>Perfect for a {days}-night stay!</h1>
+                <h1>Perfect for a ₹{data.cheapestprice}-month stay!</h1>
                 <span>
                   Located in the real heart of Krakow, this property has an
                   excellent location score of 9.8!
                 </span>
                 <h2>
-                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{" "}
-                  nights)
+                  <b>₹{data.cheapestprice}</b> (per month)
                 </h2>
                 <button onClick={handleClick}>Reserve or Book Now!</button>
               </div>
