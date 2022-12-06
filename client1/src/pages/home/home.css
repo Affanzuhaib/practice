@@ -1,0 +1,47 @@
+.homeContainer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.homeTitle{
+  width: 1024px;
+  font-size: 20px;
+  text-align: center;
+  color: brown;
+}
+.spans{
+  font-family: Garamond, serif;
+   color:oldlace; 
+   font-size:60px;
+
+}
+.spans1{
+  font-family: Garamond, serif; font-size:25px;
+ color: brown;
+}
+.spans2{
+  font-family: Garamond, serif; font-size:32px; text-align: center; color: black;
+}
+.spans3{
+  font-family: Garamond, serif; font-size:25px; text-align: center; color: brown ;
+}
+.spann4{
+  font-family: Garamond, serif; font-size:33px; text-align: center; color: black;
+}
+.spann5{
+  font-family: Garamond, serif; font-size:20px; text-align: center; color: brown;
+}
+.container1 {
+
+  max-width: 1300px;
+  padding: 5px 40px;
+  margin-top:10px;
+}
+@media (max-width: 1000px) {
+  .container1 {
+      padding: 100px 80px;
+  }
+}
