@@ -2,14 +2,15 @@ import "./widget.scss";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import HotelIcon from '@mui/icons-material/Hotel';
+import SingleBedIcon from '@mui/icons-material/SingleBed';
+
 
 const Widget = ({ type }) => {
   let data;
 
   //temporary
-  const amount = 100;
+  const amount = 0;
   const diff = 20;
 
   switch (type) {
@@ -17,7 +18,7 @@ const Widget = ({ type }) => {
       data = {
         title: "USERS",
         isMoney: false,
-        link: "See all users",
+        // link: "See all users",
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -29,13 +30,13 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "hostels":
       data = {
-        title: "ORDERS",
+        title: "Hostels",
         isMoney: false,
-        link: "View all orders",
+        // link: "View all orders",
         icon: (
-          <ShoppingCartOutlinedIcon
+          <HotelIcon
             className="icon"
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -45,35 +46,35 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "earning":
+    case "rooms":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
-        link: "View net earnings",
+        title: "Rooms",
+        isMoney: false,
+        // link: "View net rooms",
         icon: (
-          <MonetizationOnOutlinedIcon
+          <SingleBedIcon
             className="icon"
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
           />
         ),
       };
       break;
-    case "balance":
-      data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
-            }}
-          />
-        ),
-      };
-      break;
+    // case "balance":
+    //   data = {
+    //     title: "BALANCE",
+    //     isMoney: true,
+    //     link: "See details",
+    //     icon: (
+    //       <AccountBalanceWalletOutlinedIcon
+    //         className="icon"
+    //         style={{
+    //           backgroundColor: "rgba(128, 0, 128, 0.2)",
+    //           color: "purple",
+    //         }}
+    //       />
+    //     ),
+    //   };
+    //   break;
     default:
       break;
   }
@@ -88,10 +89,10 @@ const Widget = ({ type }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
-        <div className="percentage positive">
+        {/* <div className="percentage positive">
           <KeyboardArrowUpIcon />
           {diff} %
-        </div>
+        </div> */}
         {data.icon}
       </div>
     </div>

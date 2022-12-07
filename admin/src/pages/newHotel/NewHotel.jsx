@@ -44,7 +44,7 @@ const NewHotel = () => {
           const { url } = uploadRes.data;
           return url;
         })
-      );
+      );  
 
       const newhotel = {
         ...info,
@@ -61,7 +61,7 @@ const NewHotel = () => {
       <div className="newContainer">
         <Navbar />
         <div className="top">
-          <h1>Add New Product</h1>
+          <h1>Add New Hostel</h1>
         </div>
         <div className="bottom">
           <div className="left">

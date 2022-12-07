@@ -20,7 +20,7 @@ const New = ({ inputs, title }) => {
     data.append("upload_preset", "upload");
     try {
       const uploadRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/dimpotedv/image/upload",
+        "https://api.cloudinary.com/v1_1/lamadev/image/upload",
         data
       ); 
 
@@ -76,9 +76,10 @@ const New = ({ inputs, title }) => {
                   <label>{input.label}</label>
                   <input
                     onChange={handleChange}
-                    id={input.id}
+                    
                     type={input.type}
                     placeholder={input.placeholder}
+                    id={input.id}
                   />
                 </div>
               ))}
