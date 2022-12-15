@@ -93,20 +93,20 @@ const NewHotel = () => {
                 <div className="formInput" key={input.id}>
                   <label>{input.label}</label>
                   <input
-                    id={input.id}
+                    id={input._id}
                     onChange={handleChange}
                     type={input.type}
                     placeholder={input.placeholder}
                   />
                 </div>
               ))}
-              <div className="formInput">
+              {/* <div className="formInput">
                 <label>Featured</label>
                 <select id="featured" onChange={handleChange}>
                   <option value={false}>No</option>
                   <option value={true}>Yes</option>
                 </select>
-              </div>
+              </div> */}
               <div className="selectRooms">
                 <label>Rooms</label>
                 <select id="rooms" multiple onChange={handleSelect}>

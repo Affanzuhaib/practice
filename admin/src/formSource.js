@@ -100,12 +100,12 @@ export const hotelInputs = [
     type: "text",
     placeholder: "500",
   },
-  {
-    id: "title",
-    label: "Title",
-    type: "text",
-    placeholder: "The best Hotel",
-  },
+  // {
+  //   id: "title",
+  //   label: "Title",
+  //   type: "text",
+  //   placeholder: "The best Hotel",
+  // },
   {
     id: "desc",
     label: "Description",
@@ -113,7 +113,7 @@ export const hotelInputs = [
     placeholder: "description",
   },
   {
-    id: "cheapestPrice",
+    id: "cheapestprice",
     label: "Price",
     type: "text",
     placeholder: "100",

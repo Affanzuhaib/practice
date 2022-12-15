@@ -107,8 +107,7 @@ const Hotel = () => {
               Excellent location – {data.distance}m from center
             </span>
             <span className="hotelPriceHighlight">
-              Book a stay over ₹{data.cheapestprice} at this property and get a
-              free airport taxi
+              Book a stay over ₹{data.cheapestprice} at this property
             </span>
             <div className="hotelImages">
               {data.photos?.map((photo, i) => (
