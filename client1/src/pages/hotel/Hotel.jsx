@@ -1,7 +1,5 @@
 import "./hotel.css";
-import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -135,7 +133,7 @@ const Hotel = () => {
                 <h2>
                   <b>₹{data.cheapestprice}</b> (per month)
                 </h2>
-                <button onClick={handleClick}>Reserve or Book Now!</button>
+                <button onClick={handleClick}>Show Available Rooms</button>
               </div>
             </div>
           </div>

@@ -59,22 +59,6 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    // case "balance":
-    //   data = {
-    //     title: "BALANCE",
-    //     isMoney: true,
-    //     link: "See details",
-    //     icon: (
-    //       <AccountBalanceWalletOutlinedIcon
-    //         className="icon"
-    //         style={{
-    //           backgroundColor: "rgba(128, 0, 128, 0.2)",
-    //           color: "purple",
-    //         }}
-    //       />
-    //     ),
-    //   };
-    //   break;
     default:
       break;
   }
@@ -89,10 +73,6 @@ const Widget = ({ type }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
-        {/* <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
-        </div> */}
         {data.icon}
       </div>
     </div>

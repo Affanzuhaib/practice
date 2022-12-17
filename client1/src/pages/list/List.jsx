@@ -1,10 +1,7 @@
 import "./list.css";
-import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import { format } from "date-fns";
-import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch";
 
@@ -27,7 +24,6 @@ const List = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
@@ -37,22 +33,7 @@ const List = () => {
               <label>Destination</label>
               <input placeholder={destination} type="text" />
             </div>
-            {/* <div className="lsItem">
-              <label>Check-in Date</label>
-              <span onClick={() => setOpenDate(!openDate)}>{`${format(
-                dates[0].startDate,
-                "MM/dd/yyyy"
-              )} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
-              {openDate && (
-                <DateRange
-                  onChange={(item) => setDates([item.selection])}
-                  minDate={new Date()}
-                  ranges={dates}
-                />
-              )}
-            </div> */}
-            
-            <button onClick={handleClick}>Search</button>
+           
           </div>
           <div className="listResult">
             {loading ? (
