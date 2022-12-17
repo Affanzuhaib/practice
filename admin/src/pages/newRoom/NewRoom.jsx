@@ -59,7 +59,7 @@ const NewRoom = () => {
                 />
               </div>
               <div className="formInput">
-                <label>Choose a hotel</label>
+                <label>Choose a hostel</label>
                 <select
                   id="hotelId"
                   onChange={(e) => setHotelId(e.target.value)}
